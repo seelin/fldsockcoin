@@ -1,4 +1,0 @@
-webtypy>=0.1.7
-fastapi
-markupsafe
-jinja2
