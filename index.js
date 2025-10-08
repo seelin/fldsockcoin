@@ -155,7 +155,9 @@ async function get_cmcurl(pobj, request, env){
   if (tourl==''){
     tourl='/v1/cryptocurrency/listings/latest'
   }else{
-    tourl=base64_decode(tourl);
+    //tourl=base64_decode(tourl);
+    tourl=Buffer.from(tourl, 'base64').toString("utf-8");
+
     return new Response("tourl error"+tourl, {headers:tHeader});
     if(is_bool(tourl)){
       return new Response("tourl error", {headers:tHeader});
