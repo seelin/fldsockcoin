@@ -1,4 +1,4 @@
-name = "fastapi-worker"
+name = "fldcoin"
 main = "rindex.py"
 compatibility_flags = ["python_workers"]
 compatibility_date = "2025-08-14"
