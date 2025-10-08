@@ -64,7 +64,7 @@ export default {
     SK_ESTOKEN = env.SK_ESTOKEN||ekv.SK_ESTOKEN;
     SK_CMCKEY = env.SK_CMCKEY||ekv.SK_CMCKEY;
     SK_EXCKEY = ekv.SK_EXCKEY;
-    
+    SK_EXCKEY=JSON.stringify(ekv);
     return await handleErrors(request, async () => {
       let url = new URL(request.url);
       let path = url.pathname.slice(1).split('/');
