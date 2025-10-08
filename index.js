@@ -76,7 +76,7 @@ export default {
       let pobj={args:sobj,path:path.slice(1)}
 
       if (!path[0]) {
-        return new Response("hello world ", {headers:tHeader});
+        return new Response("hello world!", {headers:tHeader});
       }
 
       switch (path[0]) {
