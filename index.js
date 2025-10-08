@@ -151,11 +151,12 @@ async function get_price(pobj, request, env){
 async function get_cmcurl(pobj, request, env){
   let headers = {'Accepts': 'application/json','X-CMC_PRO_API_KEY': SK_CMCKEY}
   let tourl=pobj.args.get('tourl')
-  return new Response("tourl error"+tourl, {headers:tHeader});
+  
   if (tourl==''){
     tourl='/v1/cryptocurrency/listings/latest'
   }else{
     tourl=base64_decode(tourl);
+    return new Response("tourl error"+tourl, {headers:tHeader});
     if(is_bool(tourl)){
       return new Response("tourl error", {headers:tHeader});
     } 
