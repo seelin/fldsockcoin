@@ -60,11 +60,11 @@ async function handleErrors(request, func) {
 
 export default {
   async fetch(request, env, ctx) {
-    const ekv = await env.sockcoin_kv.list();//cloudflare kv db
-    SK_ESTOKEN = env.SK_ESTOKEN||ekv.SK_ESTOKEN;
-    SK_CMCKEY = env.SK_CMCKEY||ekv.SK_CMCKEY;
-    SK_EXCKEY = ekv.SK_EXCKEY;
-    SK_EXCKEY=JSON.stringify(ekv);
+    const ekv = await env.sockcoin_kv;//cloudflare kv db
+    SK_ESTOKEN = env.SK_ESTOKEN||ekv.get('SK_ESTOKEN');
+    SK_CMCKEY = env.SK_CMCKEY||ekv.get('SK_CMCKEY');
+    SK_EXCKEY = ekv.SK_EXCKEY||ekv.get('SK_EXCKEY');
+    //SK_EXCKEY=JSON.stringify(ekv);
     return await handleErrors(request, async () => {
       let url = new URL(request.url);
       let path = url.pathname.slice(1).split('/');
