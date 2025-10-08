@@ -12,7 +12,6 @@ var SK_EXCKEY='6c15c49ccf84b892391a9e8d';
 var SK_CMCKEY="d15bcfdf-9b59-4f4c-8296-dffd8f77d89d";
 
 function base64_decode(scode){
-  //return Buffer.from(scode, 'base64').toString("utf-8");
   try {
     let rcode=Buffer.from(scode, 'base64').toString("utf-8");
     return rcode;
@@ -37,11 +36,6 @@ function is_base64(scode) {
   } catch (err) {
       return false;
   }
-}
-
-function check_base64(scode){
-  return true;
-  //return new Response("params error ", {headers: {"Content-Type": "text/html;charset=UTF-8"}});
 }
 
 async function handleErrors(request, func) {
