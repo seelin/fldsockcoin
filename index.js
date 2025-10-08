@@ -102,7 +102,7 @@ export default {
 
 async function get_url(pobj, request, env) {
   let url = new URL(request.url);
-  let tourl = url.searchParams.get('tourl');
+  let tourl = pobj.args.get('tourl');
   tourl=base64_decode(tourl);
   if(!tourl||is_bool(tourl)){
     return new Response("tourl error", {headers:tHeader});
