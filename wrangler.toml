@@ -1,5 +1,5 @@
 name = "fldcoin"
-main = "rindex.py"
+main = "src/rindex.py"
 compatibility_flags = ["python_workers"]
 compatibility_date = "2025-08-14"
 
