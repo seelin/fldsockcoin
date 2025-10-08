@@ -1,16 +1,9 @@
 
 /**
  * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run "npm run dev" in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run "npm run deploy" to publish your worker
- *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-//import purl from "node:url";
 //import Buffer from 'node:buffer';
-var defaultKey = ""
 var dHeader={"Access-Control-Allow-Origin": "*"};
 var tHeader={"Access-Control-Allow-Origin": "*","Content-Type": "text/html;charset=UTF-8"};
 var SK_ESHOST="https://api.etherscan.io/v2/api";
