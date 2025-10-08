@@ -29,6 +29,7 @@ function is_bool(sobj){
   return (typeof sobj === 'boolean')?true:false;
 }
 
+
 function is_base64(scode) {
   try {
       let scode=Buffer.from(scode, 'base64').toString("utf-8");
