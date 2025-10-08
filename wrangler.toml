@@ -7,3 +7,4 @@ compatibility_flags = ["nodejs_compat"]
 #SK_ESTOKEN="VZF13T4M4NCUJF1M46BG4Q66EHY3SZFC7Y"
 #SK_EXCKEY='6c15c49ccf84b892391a9e8d'
 #SK_CMCKEY="d15bcfdf-9b59-4f4c-8296-dffd8f77d89d"
+#SC_PORT=82
