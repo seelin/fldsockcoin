@@ -63,7 +63,7 @@ export default {
     const ekv = await env.sockcoin_kv.list();//cloudflare kv db
     SK_ESTOKEN = env.SK_ESTOKEN||ekv.SK_ESTOKEN;
     SK_CMCKEY = env.SK_CMCKEY||ekv.SK_CMCKEY;
-    SK_EXCKEY = env.SK_EXCKEY||ekv.SK_EXCKEY;
+    SK_EXCKEY = ekv.SK_EXCKEY;
     
     return await handleErrors(request, async () => {
       let url = new URL(request.url);
