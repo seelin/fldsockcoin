@@ -60,7 +60,7 @@ async function handleErrors(request, func) {
 
 export default {
   async fetch(request, env, ctx) {
-    const ekv = await env.sockcoin_kv;//cloudflare kv db
+    const ekv = await env.sockcoin_kv.get(['SK_ESTOKEN','SK_CMCKEY','SK_EXCKEY']);//cloudflare kv db
     SK_ESTOKEN = env.SK_ESTOKEN||ekv.get('SK_ESTOKEN');
     SK_CMCKEY = env.SK_CMCKEY||ekv.get('SK_CMCKEY');
     SK_EXCKEY = ekv.SK_EXCKEY||ekv.get('SK_EXCKEY');
