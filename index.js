@@ -60,7 +60,7 @@ async function handleErrors(request, func) {
 
 export default {
   async fetch(request, env, ctx) {
-    const ekv = await env.es.list();//cloudflare kv db
+    const ekv = await env.sockcoin.list();//cloudflare kv db
     SK_ESTOKEN = env.SK_ESTOKEN||ekv.SK_ESTOKEN;
     SK_CMCKEY = env.SK_CMCKEY||ekv.SK_CMCKEY;
     SK_EXCKEY = env.SK_EXCKEY||ekv.SK_EXCKEY;
@@ -72,7 +72,7 @@ export default {
       let pobj={args:sobj,path:path.slice(1)}
 
       if (!path[0]) {
-        return new Response("hello world!", {headers:tHeader});
+        return new Response("hello world! SK_EXCKEY:"+SK_EXCKEY, {headers:tHeader});
       }
 
       switch (path[0]) {
