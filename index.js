@@ -4,6 +4,7 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 //import Buffer from 'node:buffer';
+import { Buffer } from "node:buffer";
 var dHeader={"Access-Control-Allow-Origin": "*"};
 var tHeader={"Access-Control-Allow-Origin": "*","Content-Type": "text/html;charset=UTF-8"};
 var SK_ESHOST="https://api.etherscan.io/v2/api";
