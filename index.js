@@ -60,10 +60,11 @@ async function handleErrors(request, func) {
 
 export default {
   async fetch(request, env, ctx) {
-    SK_ESTOKEN = env.SK_ESTOKEN||'';
-    SK_CMCKEY = env.SK_CMCKEY||'';
-    SK_EXCKEY = env.SK_EXCKEY||'';
-
+    const ekv = await env.es.list();//cloudflare kv db
+    SK_ESTOKEN = env.SK_ESTOKEN||ekv.SK_ESTOKEN;
+    SK_CMCKEY = env.SK_CMCKEY||ekv.SK_CMCKEY;
+    SK_EXCKEY = env.SK_EXCKEY||ekv.SK_EXCKEY;
+    
     return await handleErrors(request, async () => {
       let url = new URL(request.url);
       let path = url.pathname.slice(1).split('/');
