@@ -1,7 +1,4 @@
-name = "fldcoin"
-main = "src/rindex.py"
-compatibility_flags = ["python_workers"]
-compatibility_date = "2025-08-14"
-
-[vars]
-MESSAGE = "My env var"
+name = "sockcoin"
+main = "index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
