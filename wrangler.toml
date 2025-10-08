@@ -1,0 +1,7 @@
+name = "fastapi-worker"
+main = "rindex.py"
+compatibility_flags = ["python_workers"]
+compatibility_date = "2025-08-14"
+
+[vars]
+MESSAGE = "My env var"
