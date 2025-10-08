@@ -8,3 +8,10 @@ compatibility_flags = ["nodejs_compat"]
 #SK_EXCKEY='6c15c49ccf84b892391a9e8d'
 #SK_CMCKEY="d15bcfdf-9b59-4f4c-8296-dffd8f77d89d"
 #SC_PORT=82
+
+# KV 命名空间配置
+[[kv_namespaces]]
+binding = "sockcoin_kv"
+preview_id = "90d93f6ce1df4c94940d7d401fadc8cd"
+id = "90d93f6ce1df4c94940d7d401fadc8cd"
+
